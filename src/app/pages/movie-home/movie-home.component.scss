@@ -1,0 +1,46 @@
+.action-images{
+    // width: 200px;
+    height: 200px;
+}
+.carousel{
+    width: 100%;
+    padding: 0px;
+    
+}
+.carousel-inner{
+    height: 350px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+.carousel-inner .carousel-item img{
+    height: 400px;
+}
+.carousel-image:hover{
+    transform: scale(1.08);
+}
+.trending-movies{
+    font-family: 'Ubuntu',sans-serif;
+    padding: 5px;
+    padding-left: 30px;
+    font-weight: bold;
+}
+.rowposter{
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.row-image{
+    max-height: 200px;
+    object-fit: contain;
+    margin: 5px;
+}
+.row-image:hover{
+    transform: scale(1.1);
+    border: 2px solid rgb(39,182,201);
+    cursor: pointer;
+}
+.rowposter::-webkit-scrollbar{
+    display: none;
+}

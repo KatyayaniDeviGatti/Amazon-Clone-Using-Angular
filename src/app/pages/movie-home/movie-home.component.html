@@ -1,0 +1,77 @@
+<app-movies></app-movies>
+<div class="bg-dark">
+    <div  id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/images/themarvels.jpg" class="d-block w-100 carousel-image">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/adipursh.jpg" class="d-block w-100 carousel-image">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/virupaksha.jpg" class="d-block w-100 carousel-image">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+   </div>
+
+   <div class="container-fluid">
+        <div class="row">
+            <p class="text-white trending-movies pt-5">Trending Action Movies</p>
+            <div class="rowposter  p-2">
+                <ng-container *ngFor="let data of actionMovies">
+                  <a [routerLink]="['/movieDetails',data.id]"><img src="{{data.imageUrl}}" class="row-image"></a>
+                </ng-container>
+            </div>
+        </div>
+
+       
+        <div class="row">
+          <p class="text-white  trending-movies">Trending Horror Movies</p>
+          <div class="rowposter p-2">
+            <ng-container *ngFor="let data of horrormovies">
+                <img src="{{data.imageUrl}}"  class="row-image">
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="row">
+          <p class="text-white  trending-movies">Trending Comedy Movies</p>
+          <div class="rowposter p-2">
+            <ng-container *ngFor="let data of comedyMovies">
+                <img src="{{data.imageUrl}}"  class="row-image">
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="row">
+          <p class="text-white  trending-movies">Trending Thriller Movies</p>
+          <div class="rowposter p-2">
+            <ng-container *ngFor="let data of thrillerMovies">
+                <img src="{{data.imageUrl}}"  class="row-image">
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="row">
+          <p class="text-white  trending-movies">Trending Series</p>
+          <div class="rowposter p-2">
+            <ng-container *ngFor="let data of seriesData">
+                <img src="{{data.imageUrl}}"  class="row-image">
+            </ng-container>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+
+

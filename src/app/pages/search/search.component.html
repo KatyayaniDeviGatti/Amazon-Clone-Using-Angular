@@ -1,0 +1,32 @@
+<!-- <app-movies></app-movies> -->
+<div class="bg-dark" style="height: 100vh; width: 100%;">
+    <div class="container-fluid bg-dark p-5" >
+        <form>
+            <!-- <button class="btn btn-info mt-3" routerLink="/moviehome"><i class="bi bi-arrow-left" style="color: black; font-weight: bold; font-size: 20px;"></i></button> -->
+            <div class="row justify-content-center">
+                <div class="mb-3 col-lg-10 col-md-6 col-sm-6 col-xs-6 d-flex">
+                    <button class="me-5 btn btn-info" style="border-radius: 100%;" routerLink="/moviehome"><i class="bi bi-arrow-left" style="color: black; font-weight: bold; "></i></button>
+                    <input type="text" placeholder="Search Movie Here......" class="form-control" [(ngModel)]="this.search.InputValue" name="InputValue" (keyup)="Search()">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4">
+                    <button class="btn btn-info" >Search</button>
+                </div>
+    
+                <div *ngIf="OnSearchClick" class="filterMovies container-fluid bg-dark" >
+                    <ng-container  *ngFor="let m of filteredMovies">
+                        <!-- <p class="text-white">{{m.movieName}}</p> -->
+                        <div class="d-flex flex-column">
+                            <a [routerLink]="['/movieDetails',m.id]"><img src="{{m.imageUrl}}" class="row-image"></a>
+                             <p class="text-white p-2">{{m.movieName}}</p>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <div *ngIf="allMovies.length>0 && filteredMovies.length==0">
+                    <p class="text-white">No Results Found</p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

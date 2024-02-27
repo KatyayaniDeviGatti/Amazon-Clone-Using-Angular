@@ -1,0 +1,64 @@
+
+<!-- <app-movies></app-movies> -->
+<div class="container-fluid bg-dark" style="height: auto;">
+    <div class="row">
+        <div class="col-lg-4">
+           <button class="btn btn-info backBtn mt-3" routerLink="/moviehome"><i class="bi bi-arrow-left" style="color: black; font-weight: bold; font-size: 20px;"></i></button>
+            <img src="{{actionMovies?.imageUrl}}" class="movie-image" style="margin: 50px;">
+        </div>
+        <div class="col-lg-8">
+            <button class="btn btn-info wishlist" routerLink="/wishlist" style="font-weight: bold;">My Wishlist</button>
+            <p class="movieName m-4 mt-5">{{actionMovies?.movieName}}</p>
+            <button (click)="onClickWishlist()" class="btn btn-info ms-4" style="font-weight: bold;">{{btnText}}</button>
+            
+            <div>
+                <p style="color: skyblue; font-weight: bold; font-size: 25px;" class="m-4">Cast & Crew</p>
+                <div class="d-flex flex-row">
+                   <div class="d-flex flex-column m-3">
+                          <img src="{{actionMovies?.heroimg}}" class="cast-img">
+                          <p class="text-white text-center" style="font-size: 14px; padding-top: 10px;">{{actionMovies?.heroName}}</p>
+                   </div>
+                   <div class="d-flex flex-column m-3">
+                        <img src="{{actionMovies?.heroineimg}}" class="cast-img">
+                        <p class="text-white text-center" style="font-size: 14px; padding-top: 10px;">{{actionMovies?.heroineName}}</p>
+                    </div>
+                    <div class="d-flex flex-column m-3">
+                        <img src="{{actionMovies?.cast3img}}" class="cast-img">
+                        <p class="text-white text-center " style="font-size: 14px; padding-top: 10px;">{{actionMovies?.cast3}}</p>
+                    </div>
+                    <div class="d-flex flex-column m-3">
+                        <img src="{{actionMovies?.cast4img}}" class="cast-img">
+                        <p class="text-white text-center " style="font-size: 14px; padding-top: 10px;">{{actionMovies?.cast4}}</p>
+                    </div>
+                    <div class="d-flex flex-column m-3">
+                        <img src="{{actionMovies?.cast5img}}" class="cast-img">
+                        <p class="text-white text-center " style="font-size: 14px; padding-top: 10px;">{{actionMovies?.cast5}}</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-row">
+                    <div class="d-flex flex-column m-3">
+                           <img src="{{actionMovies?.cast6img}}" class="cast-img">
+                           <p class="text-white text-center" style="font-size: 14px; padding-top: 10px;">{{actionMovies?.cast6}}</p>
+                    </div>
+                    <div class="d-flex flex-column m-3">
+                         <img src="{{actionMovies?.cast7img}}" class="cast-img">
+                         <p class="text-white text-center" style="font-size: 14px; padding-top: 10px;">{{actionMovies?.cast7}}</p>
+                     </div>
+                     <div class="d-flex flex-column m-3">
+                         <img src="{{actionMovies?.cast8img}}" class="cast-img">
+                         <p class="text-white text-center " style="font-size: 14px; padding-top: 10px;">{{actionMovies?.cast8}}</p>
+                     </div>
+                     <div class="d-flex flex-column m-3">
+                         <img src="{{actionMovies?.cast9img}}" class="cast-img">
+                         <p class="text-white text-center " style="font-size: 14px; padding-top: 10px;">{{actionMovies?.cast9}}</p>
+                     </div>
+                     <div class="d-flex flex-column m-3">
+                         <img src="{{actionMovies?.cast10img}}" class="cast-img">
+                         <p class="text-white text-center " style="font-size: 14px; padding-top: 10px;">{{actionMovies?.cast10}}</p>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
